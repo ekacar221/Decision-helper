@@ -1,0 +1,96 @@
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 10px;
+}
+
+.option-card {
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.option-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.option-text {
+  font-size: 18px;
+  color: #222;
+  flex-grow: 1;
+  margin-right: 10px;
+  word-break: break-word;
+}
+
+.option-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 20px;
+  margin-left: 8px;
+  transition: color 0.3s ease;
+}
+
+.option-actions button:hover {
+  color: #1890ff;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  color: #1890ff;
+  font-weight: 700;
+}
+
+.buttons-container {
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.buttons-container button {
+  margin: 0 8px;
+  padding: 8px 20px;
+  font-size: 16px;
+}
+.decision-result {
+  margin-top: 30px;
+  padding: 25px 40px;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
+  max-width: 400px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Basit bir fade-in ve scale animasyonu */
+  animation: fadeScaleIn 0.5s ease forwards;
+}
+
+.decision-result h2 {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: 1.2px;
+}
+
+.decision-result p {
+  margin: 0;
+  font-size: 1.4rem;
+  font-style: italic;
+}

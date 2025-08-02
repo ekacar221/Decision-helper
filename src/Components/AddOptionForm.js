@@ -1,45 +1,25 @@
 import React, { useState } from 'react';
 import { Button } from 'antd';
 
-function AddOptionForm({ addOption, options }) {
-  const [inputValue, setInputValue] = useState("");  // input değeri
-  const [error, setError] = useState(null);          // hata mesajı
+function AddOptionForm({ addOption }) {
+  const [inputValue, setInputValue] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const trimmedOption = inputValue.trim();
-
-    // Boş mu?
-    if (!trimmedOption) {
-      setError('Lütfen bir seçenek girin.');
-      return;
-    }
-
-    // Aynı seçenek var mı?
-    if (options.includes(trimmedOption)) {
-      setError('Bu seçenek zaten eklenmiş.');
-      return;
-    }
-
-    // Hepsi doğruysa:
-    addOption(trimmedOption);
+    addOption(inputValue);
     setInputValue('');
-    setError(null);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{ maxWidth: 700, margin: '20px auto', display: 'flex', gap: '10px' }}>
       <input
         type="text"
+        placeholder="Yeni seçenek ekle..."
         value={inputValue}
-        onChange={(e) => {
-          setInputValue(e.target.value);
-          setError(null);
-        }}
+        onChange={(e) => setInputValue(e.target.value)}
+        style={{ flexGrow: 1, padding: '10px 12px', fontSize: 16, borderRadius: 6, border: '1px solid #ccc' }}
       />
       <Button type="primary" htmlType="submit">Ekle</Button>
-      {error && <div style={{ color: 'red', marginTop: 4 }}>{error}</div>}
     </form>
   );
 }
