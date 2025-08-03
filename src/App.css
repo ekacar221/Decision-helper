@@ -150,3 +150,10 @@ h2 {
   font-weight: bold;
   font-size: 24px;
 }
+.seçenek {
+  flex-grow: 1;
+  padding: 10px 12px;
+  font-size: 16;
+  border-radius: 6;
+  border: 1px solid #ccc;
+}
