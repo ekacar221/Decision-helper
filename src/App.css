@@ -73,6 +73,14 @@ h1 {
   margin-top: 40px;
   color: #1890ff;
   font-weight: 700;
+
+}
+h2 {
+  text-align: center;
+  margin-top: 40px;
+  color: #010b15;
+  font-weight: 700;
+
 }
 
 /* KARAR BUTONLARI */
@@ -92,12 +100,12 @@ h1 {
 .decision-result {
   margin-top: 30px;
   padding: 25px 40px;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  background: linear-gradient(135deg, #dad8dc 0%, #2575fc 100%);
   color: white;
   font-weight: 600;
   font-size: 1.5rem;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(37, 117, 252, 0.4);
+  box-shadow: 0 8px 20px rgba(61, 72, 91, 0.4);
   max-width: 400px;
   text-align: center;
   margin-left: auto;
@@ -130,4 +138,15 @@ h1 {
   margin: 0;
   font-size: 1.4rem;
   font-style: italic;
+}
+@keyframes renkDegisimi {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: red; }
+}
+
+.animasyonluYazi {
+  animation: renkDegisimi 3s infinite;
+  font-weight: bold;
+  font-size: 24px;
 }

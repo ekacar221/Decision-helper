@@ -76,7 +76,7 @@ function App() {
 
   return (
     <div>
-      <h1>Karar Verici</h1>
+      <h1 className="animasyonluYazi">Karar Verici</h1>
 
       <AddOptionForm addOption={addOption} options={options} />
 
@@ -111,7 +111,7 @@ function App() {
 
       <div className="buttons-container">
         <Button type="primary" onClick={makeDecision}>Karar Ver</Button>
-        <button onClick={clearOptions} style={{marginLeft: '10px', padding: '8px 16px'}}>Tümünü Temizle</button>
+         <Button type="primary" onClick={makeDecision}>Tümünü Temizle</Button>
       </div>
 
       {loading && <div style={{textAlign: 'center', marginTop: 20}}><ClipLoader color="#36d7b7" size={50} /></div>}
