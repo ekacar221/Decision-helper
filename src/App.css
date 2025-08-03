@@ -1,4 +1,4 @@
-
+/* GRID YAPISI */
 .option-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -8,7 +8,9 @@
   padding: 0 10px;
 }
 
+/* KART STİLİ */
 .option-card {
+  position: relative;
   background: #fff;
   padding: 16px 20px;
   border-radius: 12px;
@@ -17,6 +19,7 @@
   justify-content: space-between;
   align-items: center;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: visible;
 }
 
 .option-card:hover {
@@ -24,6 +27,7 @@
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
+/* YAZI */
 .option-text {
   font-size: 18px;
   color: #222;
@@ -32,20 +36,38 @@
   word-break: break-word;
 }
 
+/* BUTONLAR */
+.option-actions {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
 .option-actions button {
-  background: none;
-  border: none;
-  cursor: pointer;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
   color: #888;
-  font-size: 20px;
-  margin-left: 8px;
-  transition: color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .option-actions button:hover {
-  color: #1890ff;
+  background-color: #1890ff;
+  color: white;
+  border-color: #1890ff;
 }
 
+/* BAŞLIK */
 h1 {
   text-align: center;
   margin-top: 40px;
@@ -53,6 +75,7 @@ h1 {
   font-weight: 700;
 }
 
+/* KARAR BUTONLARI */
 .buttons-container {
   max-width: 700px;
   margin: 20px auto;
@@ -64,6 +87,8 @@ h1 {
   padding: 8px 20px;
   font-size: 16px;
 }
+
+/* KARAR SONUCU ALANI */
 .decision-result {
   margin-top: 30px;
   padding: 25px 40px;
@@ -77,9 +102,21 @@ h1 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-
-  /* Basit bir fade-in ve scale animasyonu */
   animation: fadeScaleIn 0.5s ease forwards;
+  position: relative;
+  z-index: 1;
+}
+
+/* KARAR ANİMASYON */
+@keyframes fadeScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .decision-result h2 {
